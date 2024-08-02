@@ -24,6 +24,11 @@
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .modal-box {
+    height: auto; /* Adjust height for smaller screens */
+    max-height: 90vh; /* Ensure it doesn't exceed the viewport height */
+  }
+
   .overview-content {
     flex-direction: column;
   }
@@ -70,7 +75,8 @@
 @media screen and (max-width: 480px) {
   .modal-box {
     width: 90%;
-    height: auto;
+    height: auto; /* Adjust height for very small screens */
+    max-height: 90vh; /* Ensure it doesn't exceed the viewport height */
   }
 
   .hide-on-mobile {
