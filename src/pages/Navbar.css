@@ -1,0 +1,272 @@
+/* Base Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 1rem;
+  transition: 0.5s;
+}
+
+.header-toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-right: 1px solid hsl(0, 0%, 87%);
+  height: 90vh;
+  width: 250px;
+  margin-left: 200px;
+  margin-top: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.navbar-logo {
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+.navbar-img {
+  height: 60px;
+}
+
+.navbar-item {
+  flex: 1;
+}
+
+.navbar-item-unorder {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item-list {
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #404040;
+  font-size: 24px;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  display: block; /* Sidebar is initially hidden but will use transition */
+  position: fixed;
+  top: 0;
+  right: -250px; /* Start position off-screen */
+  height: 100vh;
+  width: 250px;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow for visibility */
+  transition: right 0.5s ease; /* Smooth sliding effect */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.sidebar.show {
+  right: 0; /* Move sidebar into view */
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  list-style: none;
+  margin-left: 40px;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #404040;
+  font-size: 24px;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+.sidebar a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.sidebar-close-btn {
+  position: absolute;
+  top: 20px;
+  left: -50px; /* Position outside the sidebar */
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #404040;
+}
+
+.sidebar-logo {
+  margin: 70px 40px 60px 0;
+}
+
+.sidebar-img {
+  height: 60px;
+}
+
+.menu-btn-cross {
+  position: fixed; /* Fixed positioning for the cross button */
+  top: 10px;
+  left: calc(250px + 10px); /* Position just outside the sidebar */
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  z-index: 1001; /* Ensure it's above the sidebar */
+  transition: right 0.5s ease, opacity 0.5s ease; /* Add transition effect for smooth opening */
+}
+
+.menu-btn-cross:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+.menu-btn-cross.hide {
+  opacity: 0; /* Hide the button */
+  pointer-events: none; /* Disable interaction */
+}
+
+/* Mobile Responsive CSS */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    color: white;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    border-radius: 0;
+    border-right: none;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    background-color: transparent;
+    justify-content: space-between; /* Ensure space is evenly distributed between logo and button */
+  }
+
+  .navbar-logo {
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-right: auto;
+    padding-left: 20px;
+    display: block; /* Make sure logo is visible */
+  }
+
+  .navbar-item,
+  .navbar-item-unorder {
+    display: none; /* Hide other navbar items */
+  }
+
+  .nav-link {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  .navbar-img {
+    height: 40px;
+  }
+
+  .menu-btn {
+    display: block;
+    color: white;
+    margin-right: 20px; /* Position the menu button to the right */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    border-radius: 0;
+    border-right: none;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    background-color: transparent;
+    justify-content: space-between; /* Ensure space is evenly distributed between logo and button */
+  }
+
+  .navbar-logo {
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-right: auto;
+    padding-left: 20px;
+    display: block; /* Make sure logo is visible */
+  }
+
+  .navbar-item {
+    display: none; /* Hide other navbar items */
+  }
+
+  .sidebar {
+    display: block;
+    top: var(--header-height);
+    right: -250px; /* Adjust to match width of sidebar */
+    height: 150vh;
+    width: 250px; /* Adjust to desired width */
+    background-color: white;
+    transition: right 0.5s ease; /* Adjusted for smoother transition */
+  }
+
+  .sidebar.show {
+    right: 0;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+
+  .menu-btn {
+    display: block;
+    margin-right: 20px; /* Position the menu button to the right */
+  }
+}

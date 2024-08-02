@@ -1,0 +1,121 @@
+.rockets-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1a1d2b9f;
+  width: 960px;
+  border-radius: 25px;
+  margin: 0 auto; /* Center the container */
+}
+
+.rocket-card {
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.rocket-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.rocket-image {
+  width: 200px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  margin: 10px 20px 20px 0px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+  opacity: 0.8;
+}
+
+.rocket-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rocket-status,
+.rocket-status-active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  background-color: rgb(
+    219,
+    178,
+    89
+  ); /* Adjust opacity for better visibility */
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1; /* Ensure status is on top */
+}
+
+.rocket-status-active {
+  background-color: rgba(
+    125,
+    236,
+    171,
+    0.9
+  ); /* Adjust opacity for better visibility */
+}
+
+.rocket-status-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(202, 198, 198);
+  margin-bottom: 4px;
+}
+
+.rocket-status-value {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .rockets-container {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  .rocket-card {
+    max-width: 100%;
+    width: 100%; /* Two cards per row with gap */
+    margin: 0;
+  }
+
+  .rocket-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rocket-card {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px;
+  }
+
+  .rocket-image {
+    height: 200px; /* Reduced height on small screens */
+  }
+}

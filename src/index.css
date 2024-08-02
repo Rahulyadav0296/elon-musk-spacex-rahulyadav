@@ -1,0 +1,84 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+}
+/* App.css */
+
+.fallback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;
+  background-image: url("https://images.pexels.com/photos/10002074/pexels-photo-10002074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover; /* Ensure the background image covers the entire area */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fallback-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 100%;
+}
+
+.content {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-left: 450px; /* Align content to the right of the sidebar */
+  margin-top: 50px;
+  padding: 20px;
+  background-image: url("https://images.pexels.com/photos/10002074/pexels-photo-10002074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover; /* Ensure the background image covers the entire area */
+  background-position: center; /* Center the background image */
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  gap: 20px; /* Add gap between blocks */
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 90vh;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.main-content {
+  width: calc(50% - 20px);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    background-image: url("https://images.pexels.com/photos/10002074/pexels-photo-10002074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); /* Set background image for mobile view */
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    height: 100%;
+    background-color: transparent; /* Override white background color with image */
+  }
+
+  .content {
+    margin-left: 0; /* Remove margin for mobile view */
+    margin-top: 0;
+    min-height: 150vh;
+  }
+
+  .main-content {
+    width: 100%; /* Full width for mobile view */
+    min-height: 100vh;
+    background: transparent; /* Remove background color to show the image behind */
+  }
+}

@@ -1,0 +1,46 @@
+.dashboard {
+  display: inline-flex;
+  gap: 20px; /* Adjust as needed */
+  width: 80%;
+  border-radius: 25px;
+}
+
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust as needed */
+}
+
+.dashboard-item {
+  color: white;
+  border-radius: 20px;
+  width: 400px;
+  background-color: #1a1d2b9f;
+}
+
+/* Mobile Responsive CSS for Dashboard */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+
+  .dashboard-item {
+    width: 400px;
+    border-radius: 10px; /* Adjust border-radius for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard {
+    gap: 5px; /* Further reduce gap for very small screens */
+  }
+
+  .dashboard-item {
+    width: 400px; /* Ensure full width for very small screens */
+    border-radius: 5px; /* Further adjust border-radius */
+    padding: 10px; /* Adjust padding */
+  }
+}

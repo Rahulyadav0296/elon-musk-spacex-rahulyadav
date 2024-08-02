@@ -1,0 +1,117 @@
+.modal-box {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-content {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .overview-content {
+    flex-direction: column;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    margin-top: 80px;
+    align-items: flex-start;
+  }
+
+  .modal-header-left {
+    margin-bottom: 10px;
+  }
+
+  .modal-header-left button {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .modal-title {
+    margin-bottom: 10px;
+  }
+
+  .modal-photos {
+    display: none; /* Hide photo section on smaller screens */
+  }
+
+  .photos-content {
+    display: none; /* Hide photos content on smaller screens */
+  }
+
+  .overview-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-box {
+    width: 90%;
+    height: auto;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .overview-content {
+    flex-direction: column;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 200px;
+  }
+
+  .modal-header-left {
+    margin-bottom: 10px;
+  }
+
+  .modal-header-left button {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .modal-title {
+    margin-bottom: 10px;
+  }
+
+  .modal-photos {
+    display: none; /* Ensure the photo section remains hidden on very small screens */
+  }
+
+  .photos-content {
+    display: none; /* Ensure the photos content remains hidden on very small screens */
+  }
+
+  .overview-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+  }
+}

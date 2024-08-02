@@ -1,0 +1,151 @@
+/* Upcoming Launches Styles */
+.upcoming-launches {
+  font-family: Arial, sans-serif;
+  color: white;
+  padding: 10px 20px; /* Ensure no extra padding */
+  height: 440px;
+  margin: 0; /* Ensure no extra margin */
+}
+
+.heading {
+  font-size: 24px;
+  margin: 10px 27px; /* Adjust margin to control spacing */
+}
+
+.launch-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.launch-item {
+  flex: 0 0 auto; /* Important to ensure it does not shrink */
+  width: 100%; /* Ensure this is 100% of the wrapper's width */
+  max-width: 350px; /* Adjust to fit the design */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0 25px;
+  border-radius: 8px;
+}
+
+.launch-details {
+  margin-bottom: 20px;
+}
+
+.rocket-info {
+  text-align: center;
+  margin-right: 30px;
+}
+
+.rocket-logo {
+  width: 100px;
+  height: auto;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the carousel in the container */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.prev-button {
+  left: 5px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* Mobile Responsive CSS */
+@media screen and (max-width: 768px) {
+  .upcoming-launches {
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin: 10px 0; /* Adjust margin for smaller screens */
+  }
+
+  .launch-list {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .launch-item {
+    width: 100%; /* Make items take up more width on smaller screens */
+    max-width: none; /* Remove max-width constraint */
+    margin: 10px 0; /* Adjust margin for vertical stacking */
+    grid-template-columns: 1fr; /* Single column layout */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .rocket-logo {
+    width: 80px; /* Adjust logo size for smaller screens */
+  }
+
+  .carousel-button {
+    font-size: 12px; /* Adjust button size for smaller screens */
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .heading {
+    font-size: 18px; /* Further adjust font size */
+    margin: 10px 0; /* Further adjust margin */
+  }
+
+  .launch-item {
+    width: 100%; /* Full width for very small screens */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0 25px;
+  }
+
+  .rocket-logo {
+    width: 60px; /* Further adjust logo size */
+  }
+
+  .carousel-button {
+    font-size: 10px; /* Further adjust button size */
+  }
+}

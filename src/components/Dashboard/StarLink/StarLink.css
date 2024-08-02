@@ -1,0 +1,28 @@
+.starlink-container {
+  background-color: #1112166c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  height: 400px;
+}
+
+.starlink-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.starlink-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.starlink-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(202, 198, 198);
+}

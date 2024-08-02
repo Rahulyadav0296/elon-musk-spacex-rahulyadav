@@ -1,0 +1,120 @@
+.cape-facility {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  width: 400px;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  background-color: #11121652;
+  max-height: 650px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.cape-facility-heading {
+  font-size: 18px;
+  margin-top: 5px;
+  color: white;
+}
+
+.cape-facility-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 350px;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  margin-bottom: 10px;
+  animation: slideIn 0.6s ease-in-out;
+  animation-delay: calc(0.2s * var(--delay));
+}
+
+.cape-details,
+.cape-conditions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cape-info,
+.cape-region,
+.cape-temp,
+.cape-weather,
+.cape-wind {
+  margin-bottom: 2px;
+}
+
+.cape-info-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.cape-region-title,
+.cape-temp-title,
+.cape-weather-title,
+.cape-wind-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: rgb(202, 198, 198);
+}
+
+.cape-info-name {
+  color: rgb(202, 198, 198);
+}
+.cape-region-name,
+.cape-temp-value,
+.cape-weather-value,
+.cape-wind-value {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.show-more-button {
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+}
+
+.show-more-button span {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.show-more-button .fa-angle-up,
+.show-more-button .fa-angle-down {
+  margin-right: 5px;
+  background-color: white;
+  color: black;
+  border-radius: 100%;
+  padding: 2px;
+  font-size: 20px;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  50% {
+    opacity: 0.5;
+    display: block;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}

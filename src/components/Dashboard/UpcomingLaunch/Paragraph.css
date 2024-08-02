@@ -1,0 +1,17 @@
+.paragraph {
+  display: block; /* Use block display for full width and vertical spacing */
+  margin-bottom: 20px; /* Add space below each paragraph */
+}
+
+.label {
+  color: rgb(221, 219, 219);
+  font-size: 12px;
+  margin-bottom: 5px; /* Space below the label */
+  display: block; /* Ensure label takes up the full width available */
+}
+
+.value {
+  margin-bottom: 5px; /* Space below the value */
+  font-weight: bold;
+  display: block; /* Ensure value takes up the full width available */
+}
