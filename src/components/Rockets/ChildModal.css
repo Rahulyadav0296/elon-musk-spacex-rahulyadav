@@ -22,92 +22,10 @@
   padding: 20px;
 }
 
-.overview-content {
-  display: flex;
-  flex-direction: row; /* Default to row layout */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.overview-image {
-  max-width: 300px;
-  max-height: 300px;
-  width: auto;
-  height: auto;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.modal-header-left {
-  display: flex;
-  align-items: center;
-}
-
-.modal-title {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.modal-photos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.photos-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Responsive Design */
-@media screen and (max-width: 1200px) {
-  .modal-box {
-    width: 80%;
-    height: auto;
-  }
-
-  .overview-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .overview-image {
-    max-width: 250px;
-    max-height: 250px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .modal-box {
-    width: 90%;
-    height: auto;
-  }
-
-  .overview-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .overview-image {
-    max-width: 200px;
-    max-height: 200px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .overview-content {
     flex-direction: column;
-    align-items: center;
   }
 
   .hide-on-mobile {
@@ -116,8 +34,8 @@
 
   .modal-header {
     flex-direction: column;
-    align-items: flex-start;
     margin-top: 80px;
+    align-items: flex-start;
   }
 
   .modal-header-left {
@@ -160,9 +78,7 @@
   }
 
   .overview-content {
-    display: inline-block; /* Use inline-block for inline format */
-    text-align: center; /* Center content */
-    width: 100%;
+    flex-direction: column;
   }
 
   .modal-header {
@@ -193,11 +109,9 @@
   }
 
   .overview-image {
-    display: block; /* Display image as block to ensure it behaves like inline content */
     width: 100%;
     height: auto;
     max-width: 300px;
     max-height: 300px;
-    margin-bottom: 10px; /* Add some margin to separate it from text content */
   }
 }
