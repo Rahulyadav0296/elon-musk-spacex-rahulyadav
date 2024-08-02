@@ -89,7 +89,7 @@
   position: fixed;
   top: 0;
   right: -250px; /* Start position off-screen */
-  height: 100vh;
+  height: 150vh;
   width: 250px;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow for visibility */
@@ -146,7 +146,7 @@
 .menu-btn-cross {
   position: fixed; /* Fixed positioning for the cross button */
   top: 10px;
-  left: calc(250px + 10px); /* Position just outside the sidebar */
+  right: 10px; /* Position in the top right corner */
   font-size: 1.5rem;
   cursor: pointer;
   color: black;
@@ -167,13 +167,16 @@
   pointer-events: none; /* Disable interaction */
 }
 
-/* Mobile Responsive CSS */
-@media screen and (max-width: 768px) {
+/* Extra Small Devices (Phones, 480px and down) */
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 0 0.5rem; /* Adjust padding */
+  }
+
   .navbar {
     flex-direction: row;
     height: auto;
     width: 100%;
-    color: white;
     margin-left: 0;
     margin-top: 0;
     position: relative;
@@ -188,18 +191,12 @@
     margin-bottom: 0;
     margin-top: 10px;
     margin-right: auto;
-    padding-left: 20px;
-    display: block; /* Make sure logo is visible */
+    padding-left: 10px; /* Reduced padding */
+    display: block;
   }
 
-  .navbar-item,
-  .navbar-item-unorder {
+  .navbar-item {
     display: none; /* Hide other navbar items */
-  }
-
-  .nav-link {
-    font-size: 18px;
-    margin-left: 20px;
   }
 
   .navbar-img {
@@ -208,43 +205,14 @@
 
   .menu-btn {
     display: block;
+    margin-right: 10px; /* Adjust positioning */
     color: white;
-    margin-right: 20px; /* Position the menu button to the right */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .navbar {
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    margin-left: 0;
-    margin-top: 0;
-    position: relative;
-    border-radius: 0;
-    border-right: none;
-    border-bottom: 1px solid hsl(0, 0%, 87%);
-    background-color: transparent;
-    justify-content: space-between; /* Ensure space is evenly distributed between logo and button */
-  }
-
-  .navbar-logo {
-    margin-bottom: 0;
-    margin-top: 10px;
-    margin-right: auto;
-    padding-left: 20px;
-    display: block; /* Make sure logo is visible */
-  }
-
-  .navbar-item {
-    display: none; /* Hide other navbar items */
   }
 
   .sidebar {
-    display: block;
     top: var(--header-height);
     right: -250px; /* Adjust to match width of sidebar */
-    height: 150vh;
+    height: 150vh; /* Adjust height */
     width: 250px; /* Adjust to desired width */
     background-color: white;
     transition: right 0.5s ease; /* Adjusted for smoother transition */
@@ -265,8 +233,153 @@
     margin-bottom: 10px;
   }
 
+  .menu-btn-cross {
+    right: 10px; /* Position in the top right corner */
+    top: 10px; /* Adjust the top position */
+  }
+}
+
+/* Small Devices (Phones, 481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header {
+    padding: 0 1rem; /* Default padding */
+  }
+
+  .navbar {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    border-radius: 0;
+    border-right: none;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    background-color: transparent;
+    justify-content: space-between; /* Ensure space is evenly distributed between logo and button */
+  }
+
+  .navbar-logo {
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-right: auto;
+    padding-left: 20px;
+    display: block;
+  }
+
+  .navbar-item {
+    display: none; /* Hide other navbar items */
+  }
+
+  .nav-link {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  .navbar-img {
+    height: 40px;
+  }
+
   .menu-btn {
     display: block;
+    color: white;
     margin-right: 20px; /* Position the menu button to the right */
+  }
+
+  .sidebar {
+    top: var(--header-height);
+    right: -250px; /* Adjust to match width of sidebar */
+    height: 150vh; /* Adjust height */
+    width: 250px; /* Adjust to desired width */
+    background-color: white;
+    transition: right 0.5s ease; /* Adjusted for smoother transition */
+  }
+
+  .sidebar.show {
+    right: 0;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+
+  .menu-btn-cross {
+    right: 10px; /* Position in the top right corner */
+    top: 10px; /* Adjust the top position */
+  }
+}
+
+/* Medium Devices (Tablets, 769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    height: 150px;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    border-radius: 0;
+    border-right: none;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    background-color: white;
+    justify-content: space-between;
+  }
+
+  .navbar-logo {
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-right: auto;
+    padding-left: 30px; /* Adjust padding */
+    display: block;
+  }
+
+  .navbar-item {
+    display: none; /* Hide other navbar items */
+  }
+
+  .navbar-img {
+    height: 60px;
+  }
+
+  .menu-btn {
+    display: block;
+    margin-right: 20px; /* Adjust positioning */
+    color: black;
+  }
+
+  .sidebar {
+    top: var(--header-height);
+    right: -250px; /* Adjust to match width of sidebar */
+    height: 150vh; /* Adjust height */
+    width: 250px; /* Adjust to desired width */
+    background-color: white;
+    transition: right 0.5s ease; /* Adjusted for smoother transition */
+  }
+
+  .sidebar.show {
+    right: 0;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+
+  .menu-btn-cross {
+    right: 10px; /* Position in the top right corner */
+    top: 10px; /* Adjust the top position */
   }
 }
